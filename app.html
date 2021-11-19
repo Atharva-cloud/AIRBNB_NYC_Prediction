@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NYC AIRBNB Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	      <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+    <h2>Reviews Per Month (1-60)</h2>
+    <input class="revpermonth"  type="text" id="uirevpermonth" class="floatLabel" name="rev" value="0">
+
+<form class="form">
+	<h2>Number Of Reviews</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-review-1" name="uireviews" value="1"/>
+		<label for="radio-review-1">1</label>
+		<input type="radio" id="radio-review-2" name="uireviews" value="2" checked/>
+		<label for="radio-review-2">2</label>
+		<input type="radio" id="radio-review-3" name="uireviews" value="3"/>
+		<label for="radio-review-3">3</label>
+		<input type="radio" id="radio-review-4" name="uireviews" value="4"/>
+		<label for="radio-review-4">4</label>
+		<input type="radio" id="radio-review-5" name="uireviews" value="5"/>
+		<label for="radio-review-5">5</label>
+</div>
+    </form>
+
+
+	<h2>Neighbourhood Group</h2>
+	<div>
+  <select class="neighbourhood_grp" name="" id="uineighbourhoodgrp">
+    <option value="" disabled="disabled" selected="selected">Choose a NeighbourHood Group</option>
+		<option>ng_manhattan</option>
+        <option>ng_Staten Island</option>
+  </select>
+</div>
+
+
+
+    <h2>Neighbourhood</h2>
+    <div>
+    <select class="neighbourhood" name="" id="uineighbourhood">
+      <option value="" disabled="disabled" selected="selected">Choose a Neighbourhood</option>
+          <option>nh_willowbrook</option>
+          <option>nh_williamsburg</option>
+    </select>
+</div>
+
+
+
+    <h2>Room Type</h2>
+    <div>
+    <select class="room_type" name="" id="uiroomtype">
+      <option value="" disabled="disabled" selected="selected">Type of Room</option>
+          <option>rt_private room</option>
+          
+    </select>
+</div>
+
+
+    <h2>Availability(1-365)</h2>
+    <input class="availability"  type="text" id="uiavailability" class="floatLabel" name="avail365" value="0">
+
+
+    
+    <h2>Minimum Nights(1-30)</h2>
+    <input class="min_nights"  type="text" id="uimin_nights" class="floatLabel" name="min_nights" value="0">
+
+
+
+    <h2>Host Count(1-300)</h2>
+    <input class="host_count"  type="text" id="uihost_count" class="floatLabel" name="count" value="0">
+
+
+
+
+    <h2>Name Length(1-180)</h2>
+    <input class="Name_length"  type="text" id="uilength" class="floatLabel" name="length" value="0">
+
+
+
+
+	  <button id="EstimateButton" onclick="onClickedEstimatePrice()">Estimate Price</button>
+	  <div id="uiEstimatedPrice" class="result">  	<h2></h2> </div>
+  </body>
+  <script >function hello(){ console.log("hi");}</script>
+</html>
